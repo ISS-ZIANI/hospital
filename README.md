@@ -38,7 +38,6 @@ Ce TP a pour objectif de créer une petite application de gestion hospitalière 
 
 ### 🔍 Patients enregistrés
 
-![patients](screenshots/patients.png)
 
 ### 🩺 Médecins insérés
 
