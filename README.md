@@ -38,16 +38,20 @@ Ce TP a pour objectif de créer une petite application de gestion hospitalière 
 
 ### 🔍 Patients enregistrés
 
+![patients](screenshots/patients.png)
 
 ### 🩺 Médecins insérés
 
 ![medecins](screenshots/medecins.png)
 
-### 📅 Rendez-vous et consultation créés
+### 📅 Rendez-vous créés
 
 ![rendezvous](screenshots/rdv.png)
 
----
+### 📝 Consultation enregistrée
+
+![consultation](screenshots/consultation.png)
+
 
 ## 💡 Points techniques
 
