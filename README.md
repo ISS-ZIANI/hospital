@@ -46,11 +46,11 @@ Ce TP a pour objectif de créer une petite application de gestion hospitalière 
 
 ### 📅 Rendez-vous créés
 
-![rendezvous](screenshots/rdv.png)
+![rendezvous](screenshots/rendezvous.png)
 
 ### 📝 Consultation enregistrée
 
-![consultation](screenshots/consultation.png)
+![consultations](screenshots/consultations.png)
 
 
 ## 💡 Points techniques
