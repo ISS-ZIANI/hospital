@@ -2,39 +2,43 @@
 
 ## 🎯 Objectif du TP
 
-Ce TP a pour objectif de créer une petite application de gestion hospitalière avec **Spring Boot**, en utilisant **Spring Data JPA** pour manipuler les données (patients, médecins, rendez-vous, consultations), tout en respectant l’architecture MVC simplifiée.
+Dans ce TP, j'ai réalisé une application de gestion hospitalière en utilisant **Spring Boot**. L’idée était de manipuler les entités comme les patients, les médecins, les rendez-vous et les consultations, en utilisant **Spring Data JPA** pour la persistance des données. J’ai aussi suivi une architecture simple basée sur le modèle MVC.
 
 ---
 
 ## 🧱 Structure du projet
 
-- **Entities (`entites/`)** : 
+Voici la structure principale que j’ai mise en place :
+
+- **Entities (`entites/`)** : J’ai défini les entités suivantes avec les annotations JPA :
   - `Patient`
   - `Medecin`
   - `RendezVous`
   - `Consultation`
 
-- **Repositories (`repositories/`)** : interfaces JPA pour accéder à la base de données.
+- **Repositories (`repositories/`)** : Ce sont les interfaces qui étendent `JpaRepository` pour interagir avec la base de données.
 
-- **Service (`service/`)** : 
-  - Interface `IHospitalService`
-  - Implémentation `IHospitalServiceImpl`
+- **Service (`service/`)** :
+  - Une interface `IHospitalService` que j’ai définie.
+  - Une classe d’implémentation `IHospitalServiceImpl` dans laquelle j’ai codé la logique métier pour insérer les données.
 
-- **HospitalApplication** : classe principale où j’utilise `CommandLineRunner` pour insérer des données automatiquement au démarrage.
-
----
-
-## 🗃️ Fonctionnalités réalisées
-
-- ✅ Création des entités avec les annotations JPA
-- ✅ Définition des relations entre entités (`@ManyToOne`, `@OneToMany`)
-- ✅ Création de services pour insérer les entités
-- ✅ Insertion de patients, médecins, rendez-vous et consultations dans la base H2
-- ✅ Affichage automatique de certains enregistrements via la console
+- **Classe principale (`HospitalApplication`)** : C’est ici que j’ai utilisé `CommandLineRunner` pour insérer automatiquement des données lors du démarrage de l’application.
 
 ---
 
-## 📸 Captures d’écran
+## 🗃️ Fonctionnalités que j’ai développées
+
+- ✅ Création des entités avec les bonnes annotations JPA
+- ✅ Définition des relations entre les entités (par exemple, `@ManyToOne`, `@OneToMany`)
+- ✅ Création de services pour gérer les opérations de création
+- ✅ Insertion automatique des patients, médecins, rendez-vous et consultations dans la base de données H2
+- ✅ Affichage de certains enregistrements dans la console pour vérifier que tout fonctionne bien
+
+---
+
+## 📸 Quelques captures d’écran
+
+Voici quelques aperçus des données que j’ai insérées :
 
 ### 🔍 Patients enregistrés
 ![patients](screenshots/patients.PNG)
@@ -48,16 +52,20 @@ Ce TP a pour objectif de créer une petite application de gestion hospitalière 
 ### 📝 Consultation enregistrée
 ![consultations](screenshots/consultations.PNG)
 
-## 💡 Points techniques
+---
 
-- Utilisation de `CommandLineRunner` pour insérer des données de test
-- Injection de dépendances via constructeur dans le service
-- Base de données utilisée : **H2 en mémoire**
-- Console H2 disponible à : `http://localhost:8080/h2-console`
+## 💡 Ce que j’ai appliqué techniquement
+
+- J’ai utilisé `CommandLineRunner` pour insérer automatiquement des données de test au démarrage
+- J’ai injecté les dépendances dans mes classes via le constructeur
+- J’ai utilisé une base de données **H2 en mémoire**, ce qui est pratique pour les tests
+- La console H2 est accessible à cette adresse : `http://localhost:8080/h2-console`
 
 ---
 
-## 🚀 Lancement du projet
+## 🚀 Comment lancer le projet
+
+Pour lancer l’application, j’utilise simplement la commande suivante :
 
 ```bash
 mvn spring-boot:run
